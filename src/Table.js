@@ -27,23 +27,14 @@ const TableBody = props => {
 }  
 
 class Table extends Component {
-    constructor(props) {
-        var date = new Date();
-        super(props);
-        this.state = { date: date };
-    }
     render() {
-        var date = this.state.date;
         const { characterData, removeCharacter } = this.props
         
         return (
-            <div>
-                <table>
-                    <TableHeader />
-                    <TableBody characterData={characterData} removeCharacter={removeCharacter} />
-                </table>
-                <h6>generated: {date.toLocaleString()}</h6>
-            </div>
+            <table>
+                <TableHeader />
+                <TableBody characterData={characterData} removeCharacter={removeCharacter} />
+            </table>
         )
     }
 }
